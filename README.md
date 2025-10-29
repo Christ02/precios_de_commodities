@@ -181,7 +181,3 @@ joblib==1.3.2
 **Christian Barrios**
 Email: barriosc31@gmail.com | christianbarrios@ufm.edu
 GitHub: [@Christ02](https://github.com/Christ02)
-
----
-
-**Última actualización**: Octubre 2025
