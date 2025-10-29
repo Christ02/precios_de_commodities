@@ -44,12 +44,14 @@ outputs/figures/                        # 6 visualizaciones
 ## Metodología
 
 ### 1. Datos
+
 - **Origen**: Excel con precios reales y predicciones de 5 modelos
 - **Filtrado**: Horizonte de 4 semanas (27-29 días)
 - **Selección**: 3 modelos con cobertura >50% (eliminados HFWV8N y LFHXNV)
 - **Resultado**: 56 registros sin valores nulos
 
 ### 2. Features (28 totales)
+
 - Por modelo: cambio absoluto, cambio %, dirección (9 features)
 - Agregadas: mean, median, std, min, max, range (6 features)
 - Consenso: dirección mayoritaria, acuerdo, bullish/bearish (5 features)
@@ -57,6 +59,7 @@ outputs/figures/                        # 6 visualizaciones
 - Diferencias entre modelos (3 features)
 
 ### 3. Modelado
+
 - **Split**: 70% train (39) / 30% test (17), sin shuffle
 - **Modelos**: Logistic Regression vs Random Forest
 - **Preprocesamiento**: StandardScaler
@@ -65,12 +68,14 @@ outputs/figures/                        # 6 visualizaciones
 ### 4. Evaluación
 
 **Métricas**:
+
 - Accuracy: 76.47%
 - Precision: 60%
 - Recall: 60%
 - F1-Score: 60%
 
 **Matriz de Confusión**:
+
 ```
               Predicho
               Baja  Sube
@@ -79,6 +84,7 @@ Real  Baja     10     2
 ```
 
 **Top 5 Features**:
+
 1. avg_pct_change (12.51%)
 2. AA6KBD_pct_change (11.64%)
 3. avg_change (10.51%)
@@ -90,16 +96,19 @@ Real  Baja     10     2
 ## Conclusiones
 
 ### Resumen
+
 - Modelo balanceado con 76.47% de accuracy
 - Features de cambio porcentual y consenso son las más importantes
 - Eliminación de modelos con baja cobertura fue crucial para dataset limpio
 
 ### Limitaciones
+
 - Dataset pequeño (56 registros) limita generalización
 - Un solo commodity (fertilizante Granular)
 - Horizonte temporal fijo (4 semanas)
 
 ### Próximos Pasos
+
 1. Ampliar dataset (objetivo: >200 registros)
 2. Expandir a múltiples commodities
 3. Probar XGBoost/LightGBM
@@ -169,8 +178,8 @@ joblib==1.3.2
 
 ## Autor
 
-**Christian Barrios**  
-Email: barriosc31@gmail.com | christianbarrios@ufm.edu  
+**Christian Barrios**
+Email: barriosc31@gmail.com | christianbarrios@ufm.edu
 GitHub: [@Christ02](https://github.com/Christ02)
 
 ---
