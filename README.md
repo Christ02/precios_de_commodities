@@ -24,8 +24,7 @@ notebooks/
 ├── 01_analisis_exploratorio.ipynb     # EDA
 ├── 02_preparacion_datos.ipynb         # Limpieza y filtrado
 ├── 03_feature_engineering.ipynb       # Creación de features
-├── 04_modelado_clasificacion.ipynb    # Entrenamiento
-└── 05_evaluacion_resultados.ipynb     # Evaluación final
+├── 04_modelado_clasificacion.ipynb    # Entrenamiento y Modelado
 
 data/
 ├── raw/ReportDataALL_20250404.xlsx    # Datos originales
